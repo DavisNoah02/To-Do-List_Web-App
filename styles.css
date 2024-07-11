@@ -1,0 +1,332 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #272525, #13123a);
+    color: rgb(239, 230, 230);
+    position: relative;
+    width: 100%;
+    top: 10;
+    left: 10;
+    position:fixed;
+}
+
+.welcome-msg {
+    font-size: larger;
+}
+
+.container {
+    width: 100;
+    min-height: calc(100vh - 38px);
+    background: linear-gradient(135deg, #9d9dc3, #6f6f63);
+    padding: 10px;
+}
+
+.app h2 img {
+    max-width: 10%;
+}
+
+.app {
+    width: 100%;
+    max-width: 540px;
+    background: #16314486;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.app h2 {
+    color: #030405e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:#1f2327e9;
+    border-radius: 3dvh;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 18px;
+    font-size: medium;
+    color: rgb(255, 255, 255);
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 16px 30px;
+    transition: transform 1.2s;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    background: linear-gradient(to right, #bebbbb, #224b34);
+}
+
+.btn:hover, .btn:focus, .btn:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+    background:rgb(156, 149, 149);
+    margin-bottom: 5px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    color: rgb(19, 14, 14);
+    justify-content: space-between;
+}
+
+ul li:hover {
+    background: rgb(199, 196, 196);
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(Images/icons8-unchecked-checkbox-48.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    background: linear-gradient(to right, #60605d, #3a3638);
+}
+
+ul li.checked::before {
+    background-image: url(Images/icons8-checked-checkbox-48.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 27px;
+    color: #db4141;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover {
+    background: #2d0b18;
+    border-radius: 70%;
+}
+
+ul li .edit {
+    position: absolute;
+    right: 50px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #141667;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li .edit:hover {
+    background: #6e69d3;
+    border-radius: 50%;
+}
+
+footer {
+    padding-top: 20px;
+    text-align: center;
+    margin-top: auto;
+    padding: 10px 0;
+    background: #190b3e;
+    color: white;
+}
+
+footer a {
+    color: #b1aeab;
+    text-decoration: none;
+}
+.socialicons {
+    display: flex;
+    justify-content: center;
+}
+.socialicons a {
+    text-decoration: none;
+    font-size: 25px;
+    padding: 5px;
+    margin: 5px;  
+}
+.socialicons a :hover{
+    text-decoration: underline;
+}
+#scrollTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 40px;
+    height: 46px;
+    z-index: 99;
+    font-size: 26px;
+    border: none;
+    outline: none;
+    background-color: rgb(101, 79, 79);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 30%;
+    transition: 1s;
+}
+
+#scrollTop:hover {
+    background-color: rgb(32, 99, 14);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .app {
+        margin: 50px 20px;
+        padding: 20px 15px 35px;
+    }
+
+    .input-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input {
+        margin-bottom: 20px;
+    }
+
+    .btn:hover, .btn:focus, .btn:active {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        transition: 1s;
+    }
+      ul li {
+        flex-direction: row;
+        align-items: center;
+        padding: 12px 8px;
+        justify-content: space-around;
+    }
+
+    ul li::before {
+        position: static;
+        margin-right: 10px;
+    }
+
+    ul li span, ul li .edit {
+        position: static;
+        margin-top: 0;
+        font-size: 15px;
+        margin-left: 10px;
+        justify-content: auto;
+    }
+
+    ul li span {
+        order: 2;
+        font-size:25px ;
+    }
+
+    ul li .edit {
+        order: 2;
+        font-size:20px ;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    .socialicons {
+        display: block;
+        padding: 10px;
+    }
+
+    .socialicons a {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        font-size: medium;
+    }
+
+    .app {
+        margin: 20px 10px;
+        padding: 10px 10px 20px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+        transition: transform 1s;
+    }
+    ul li {
+        font-size: 15px;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 8px;
+        justify-content:space-around;
+    }
+
+    ul li::before {
+        position: relative;
+        margin-right: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .socialicons a i {
+        font-size: em;
+    }
+}
