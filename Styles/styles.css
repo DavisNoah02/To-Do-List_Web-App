@@ -57,6 +57,41 @@ body {
     border-radius: 50px; 
     color: greenyellow;
 } */
+#current-time {
+    position:fixed;
+    top: 50px; 
+    right: 50px; 
+    background-color: #25cf85;
+    padding: 20px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 15px;
+    opacity:calc(40%);
+    z-index: 1000; 
+    transition: all 0.3s ease; 
+}
+#current-time {
+    color: #e2e3d6;
+    font-weight: bold;
+    margin-left: 20px;
+    transition: all .6s;
+}
+#current-time:hover {
+    background-color: #47bc24; 
+    transform: scale(1.1); 
+    opacity:calc(70%);
+}
+
+
+@media (max-width: 768px) {
+    #current-time {
+        top: 10px;
+        right: 10px;
+        padding: 10px 15px;
+        text-align: center; 
+    } 
+
+}
 .container {
     width: 100;
     min-height: calc(100vh - 38px);
@@ -74,7 +109,7 @@ body {
     background: #16314486;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
-    border-radius: 10px;
+    border-radius: 40px;
 }
 
 .app h2 {
