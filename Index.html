@@ -7,15 +7,24 @@
     <link rel="stylesheet" href="/Styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
 </head>
 <body> 
     <!-- navigation bar -->
     <nav class="navbar">
         <span class="welcome-msg">To-Do</span>
-        <span> Stay productive !! </span>
+        <span> Stay productive, Stay focused !! </span>
     </nav>
+ 
+    
+
      <!-- main container -->
     <div class="container">
+        <div id="datetime">
+            <button class="date-button" title="Current Date and Time"> <span></span> </button>
+            <script src="To-Do_JS/datetme.js"></script>
+        </div>
         <div class="app">
 
             <h2>To Do List<img src="Assets/ToDo-List.jpg" alt="To Do List"></h2>
@@ -27,16 +36,24 @@
             <ul id="list"></ul>
         </div>
     </div>
-    <!-- footer -->
+
+
+   <!-- footer -->
     <footer>
-        <p>Copyright &copy; 2024 | All Rights Reserved. | by NoahDave </p>
+        <p class="copyright">
+            &copy; <span id="current-year"></span> All Rights Reserved. 
+            <span class="footer-links">
+                | Made with &#10084; by 
+                <a href="https://github.com/DavisNoah02" style="color: green;">NoahDave</a> 
+            </span>
+        </p>
         <div class="socialicons">
-            <a href="https://github.com/DavisNoah02"><i class="fab fa-github"></i></a>
-            <a href="https:"><i class="fab fa-instagram"></i></a>
-            <a href="mail to:noahdavemunene@gmail.com"><i class="fa fa-envelope"></i></a>
-            <a href=" https://www.linkedin.com/in/noah-dave-339111235/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/DavisNoah02" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/noah-dave-339111235/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:noahdavemunene@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-envelope"></i></a>
         </div> 
     </footer>
+    <!-- scroll to top -->
     <button id="scrollTop" title="Go to top"><i class="fas fa-chevron-up"></i></button>
     <script src="/To-Do_JS/To-do.js"></script>
 </body>

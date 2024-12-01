@@ -11,10 +11,12 @@ inputBox.addEventListener("keydown", function (event) {
     }
 })
 
+
 // Function to add new task to the list
 function addTask(){
     if(inputBox.value === ''){ //check condition
         alert("Write something")
+        //-------
     }
     else{
         // create a new list item 
@@ -70,10 +72,10 @@ function saveData(){
 }
 
 // retrieves the saved data from localStorage and display it in the task list
-function showTask(){
-    inputlist.innerHTML = localStorage.getItem("data")
-}
-showTask();  
+// function showTask(){
+//     inputlist.innerHTML = localStorage.getItem("data")
+// }
+// showTask();  
 
 
 window.onload = function() {
@@ -94,3 +96,16 @@ window.onload = function() {
         document.documentElement.scrollTop = 0;
     };
 };
+
+
+function updateYear() {
+    const yearElement = document.getElementById('current-year');
+    yearElement.textContent = new Date().getFullYear();
+}
+
+// Initial update
+updateYear();
+
+// Update every year (on January 1st)
+setInterval(updateYear, 1000 * 60 * 60 * 24 * 365);
+

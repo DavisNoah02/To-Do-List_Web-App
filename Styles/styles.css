@@ -32,7 +32,31 @@ body {
 .welcome-msg {
     font-size: larger;
 }
-
+#datetime {
+    color: rgb(222, 254, 219) !important;
+    margin: 0 1rem;
+    min-height: 20vh;
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
+    @media (max-width: 480px) {
+        font-size: 0.9rem;
+    }
+}
+/* #datetime{
+    
+    margin: 0 1rem;
+    padding: 0.5rem ;
+    border: none;
+    border-radius: 50px; 
+    color: greenyellow;
+} */
 .container {
     width: 100;
     min-height: calc(100vh - 38px);
