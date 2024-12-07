@@ -112,15 +112,18 @@ function showTask(){
     };
 
 
-// Function to update the current year
-function updateYear() {
-    const yearElement = document.getElementById('current-year');
-    yearElement.textContent = new Date().getFullYear();
-}
+// // Function to update the current year
+// function updateYear() {
+//     const yearElement = document.getElementById('current-year');
+//     yearElement.textContent = new Date().getFullYear();
+// }
 
-// Initial update
-updateYear();
+// // Initial update
+// updateYear();
 
-// Update every year (on January 1st)
-setInterval(updateYear, 1000 * 60 * 60 * 24 * 365);
+// // Update every year (on January 1st)
+// setInterval(updateYear, 1000 * 60 * 60 * 24 * 365);
 
+// Add year in the footer(CopyRight Notice)
+let year = document.document.getElementById('current-year');
+year.innerText = new Date().getFullYear();
