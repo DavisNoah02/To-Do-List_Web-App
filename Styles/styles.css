@@ -20,7 +20,7 @@ body {
     text-transform: uppercase;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 10px 20px;
-    background: linear-gradient(135deg, #272525, #13123a);
+    background: linear-gradient(135deg, #854141, #4340d0);
     color: rgb(239, 230, 230);
     position: relative;
     width: 100%;
@@ -61,7 +61,7 @@ body {
     position:fixed;
     top: 50px; 
     right: 50px; 
-    background-color: #11251c;
+    background-color: #21583f;
     padding: 20px 20px;
     border-radius: 15px;
     cursor: pointer;
@@ -235,16 +235,16 @@ ul li .edit:hover {
 }
 
 footer {
-    padding-top: 20px;
+    padding-top: 10px;
     text-align: center;
     margin-top: auto;
     padding: 10px 0;
-    background: #190b3e;
+    background: #232c4d;
     color: white;
 }
 
 footer a {
-    color: #b1aeab;
+    color: #e6dbcf;
     text-decoration: none;
 }
 .socialicons {
@@ -255,11 +255,28 @@ footer a {
     text-decoration: none;
     font-size: 25px;
     padding: 5px;
+    border: 1px solid rgb(182, 171, 171);
+    border-radius: 8px;
     margin: 5px;  
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
 }
 .socialicons a :hover{
-    text-decoration: underline;
+    transform: scale(1.05);
+  transition: all 0.25s ease-out;
+  border: none;
 }
+.socialicons .github:hover {
+    background-color: white;
+    color: black;
+  }
+  .socialicons .linkedin:hover {
+    background-color: #0a66c2;
+    color: white;
+  }
+  .socialicons .email:hover {
+    background-color: #95a1ac;
+    color: white;
+  }
 #scrollTop {
     display: none;
     position: fixed;
