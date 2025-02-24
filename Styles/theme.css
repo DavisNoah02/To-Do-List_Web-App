@@ -1,0 +1,36 @@
+.theme-toggle {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #8f8888;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #b79a9a;
+}
+
+#theme-icon {
+  font-size: 24px;
+}
+#theme-icon::before {
+    content: "\2600"; /* sun icon */
+}
+
+.dark-mode #theme-icon::before {
+    content: "\f186"; /* moon icon */
+  }
+
+.dark-mode .theme-toggle {
+  background-color: #fff;
+  color: #333;
+}
+
+

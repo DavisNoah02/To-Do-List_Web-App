@@ -1,3 +1,13 @@
+// Theme 
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const body = document.getElementById('body');
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
+
+
 // Selecting the input box and the task list elements from the HTML
 let inputBox = document.querySelector('#task-input');
 let inputlist = document.querySelector('#list');
@@ -110,19 +120,6 @@ function showTask(){
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     };
-
-
-// // Function to update the current year
-// function updateYear() {
-//     const yearElement = document.getElementById('current-year');
-//     yearElement.textContent = new Date().getFullYear();
-// }
-
-// // Initial update
-// updateYear();
-
-// // Update every year (on January 1st)
-// setInterval(updateYear, 1000 * 60 * 60 * 24 * 365);
 
 // Add year in the footer(CopyRight Notice)
 let year = document.document.getElementById('current-year');

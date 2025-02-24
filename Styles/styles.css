@@ -14,14 +14,14 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
     align-items: center;
     font-size: large;
     text-transform: uppercase;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #854141, #4340d0);
-    color: rgb(239, 230, 230);
+    padding: 10px 10px;
+    background: linear-gradient(135deg, #b9b5b5, #2c2042);
+    color: rgb(77, 45, 45);
     position: relative;
     width: 100%;
     top: 10;
@@ -60,7 +60,7 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 20px; 
+    gap: 10px; 
 }
 
 .nav-link {
@@ -79,17 +79,6 @@ body {
     transform: scale(1.1);
 }
 
-
-
-
-/* #datetime{
-    
-    margin: 0 1rem;
-    padding: 0.5rem ;
-    border: none;
-    border-radius: 50px; 
-    color: greenyellow;
-} */
 #current-time {
     position:fixed;
     top: 50px; 
@@ -128,7 +117,7 @@ body {
 .container {
     width: 100;
     min-height: calc(100vh - 38px);
-    background: linear-gradient(135deg, #9d9dc3, #6f6f63);
+    background: linear-gradient(135deg, #9d9dc3, #505353);
     padding: 10px;
 }
 
