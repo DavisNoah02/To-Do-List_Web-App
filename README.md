@@ -12,7 +12,6 @@
  + Delete tasks
  + User-friendly
  + Local Storage Supported
- + Displays current Date and Time
 
 
  ## Usage

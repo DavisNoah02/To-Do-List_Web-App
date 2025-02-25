@@ -2,55 +2,150 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon"   type="image/x-icon" href="/Assets/checklist.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/Assets/icons8-checked-checkbox-48.png">
     <title>Welcome to Your To-Do List</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
             display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .logo h2 {
+            color: #0066cc;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Welcome Container */
+        .welcome-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f8ff;
-        }
-        .welcome-container {
             text-align: center;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
+
+        .welcome-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .welcome-card:hover {
+            transform: translateY(-10px);
+        }
+
         h1 {
             color: #0066cc;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #0066cc, #a777e3);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
+
+        p {
+            color: #555;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
         button {
-            background-color: #0066cc;
+            background: linear-gradient(90deg, #0066cc, #004499);
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 50px;
             cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
         }
+
         button:hover {
-            background-color: #004499;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.4);
         }
     </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="/Assets/checklist.png" alt="To-Do List Logo">
+                <h2>To-Do List</h2>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Section -->
     <div class="welcome-container">
-        <h1>Welcome to Your To-Do List</h1>
-        <p>Get started with your day by creating tasks that will help you achieve your goals!</p>
-        <button onclick="location.href='todo-list.html'">Get Started</button>
+        <div class="welcome-card">
+            <h1>Welcome to Your    </h1>
+            <img src="/Assets/activeTo-Do.gif" alt="To-Do List Logo">
+            <p>Unleash your productivity with a  simple way to organize your day and conquer your goals!</p>
+            <button onclick="location.href='To-DoList.html'">Get Started</button>
+        </div>
     </div>
 
     <script>
-        // This script will redirect the user to the To Do list page when the button is clicked
-        document.querySelector('button').addEventListener('click', () => {
+    
+        document.querySelector('button').addEventListener('click', (event) => {
+            event.preventDefault();
+            document.querySelector('html').style.scrollBehavior = 'smooth';
             location.href = 'To-DoList.html';
         });
+    </script>
     </script>
 </body>
 </html>

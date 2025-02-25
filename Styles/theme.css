@@ -34,3 +34,21 @@
 }
 
 
+
+
+.dark-mode {
+  background-color: #7b7777; 
+}
+
+.dark-mode .container {
+  background-color: #444; 
+}
+
+.dark-mode .navbar{
+  background: linear-gradient(135deg, #3d2331, #1f0d5b);
+  color: rgb(255, 232, 232);
+}
+.dark-mode .app{
+  background-color: #383636; 
+}
+

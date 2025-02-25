@@ -1,5 +1,4 @@
-// var dt = new Date();
-// document.getElementById("datetime").innerHTML = dt.toLocaleString();
+
 
 // Function to update current time and day
 function updateDateTime() {

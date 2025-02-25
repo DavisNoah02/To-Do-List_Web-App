@@ -5,9 +5,9 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/Assets/icons8-checked-checkbox-48.png">
     <link rel="stylesheet" href="/Styles/styles.css">
     <link rel="stylesheet" href="/Styles/theme.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -22,28 +22,17 @@
         <!-- <button onclick="window.location.href='index.html'" class="btn" id="home-button">Home</button> -->
         <div class="nav-links">
             <a href="index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="about.html" class="nav-link">Community</a>
+            <a href="https://github.com/DavisNoah02" class="nav-link">About</a>
         </div>
         <div id="theme-toggle" class="theme-toggle">
-            <i id="theme-icon" class="fas fa-sun-alt"></i>
-         </div>
+            <i id="theme-icon" class="fas fa-sun"></i>
+        </div>
     </nav>
 
-
-  <div>
-    <span id="current-time" data-testid="currentDay"></span>
-    <span id="current-time-utc" data-testid="currentTimeUTC"></span>
-    
-  </div>
     
      <!-- main container -->
 
     <div class="container">
-        <!-- <div id="datetime">
-            <button class="date-button" title="Current Date and Time"> <span></span> </button>
-            <script src="To-Do_JS/datetme.js"></script>
-        </div> -->
       <script src="To-Do_JS/datetme.js"	></script>
         <div class="app">
 
@@ -61,12 +50,13 @@
    <!-- footer -->
     <footer>
         <p class="copyright">
-            &copy; <span class="year"></span> All Rights Reserved. 
+            &copy; <span class="year" id="current-year"></span> All Rights Reserved. 
             <span class="footer-links">
-                | Made with &#10084; by 
-                <a href="https://github.com/DavisNoah02" style="color: green;">NoahDave</a> 
+                | Made with <span style="color: #ff0033; font-size: 1.5em;">&#9829;</span> by 
+                <a href="https://github.com/DavisNoah02" >NoahDave</a> 
             </span>
         </p>
+    
         <div class="socialicons">
             <a class="github" href="https://github.com/DavisNoah02" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
             <a class="linkedin"href="https://www.linkedin.com/in/noah-dave-339111235/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
@@ -74,8 +64,7 @@
         </div> 
     </footer>
 </div>
-    <!-- scroll to top -->
-    <button id="scrollTop" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+   
     <script src="/To-Do_JS/To-do.js"></script>
 </body>
 </html>
