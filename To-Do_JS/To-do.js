@@ -1,5 +1,5 @@
 // Theme 
-const themeToggle = document.getElementById('theme-toggle');
+const themeToggle = document.getElementById ('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 
 themeToggle.addEventListener('click', () => {
@@ -17,7 +17,16 @@ inputBox.addEventListener("keydown", function (event) {
         inputBox.value = "";
     }
 });
-
+// Add task button event listener
+document.getElementById('add-task-button').addEventListener('click', () => {
+    const inputValue = inputBox.value.trim();
+    if (inputValue) {
+        addTask(inputValue);
+        inputBox.value = "";
+    }else{
+        alert("Write something");
+    }
+});
 // Function to add new task to the list
 function addTask(taskText){
     if(!taskText || taskText.trim() === ''){ 

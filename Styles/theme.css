@@ -6,7 +6,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #8f8888;
+  background-color: #c7c4c4;
   color: #fff;
   text-align: center;
   line-height: 40px;
@@ -30,7 +30,7 @@
 
 .dark-mode .theme-toggle {
   background-color: #fff;
-  color: #333;
+  color: #757272;
 }
 
 
@@ -41,7 +41,7 @@
 }
 
 .dark-mode .container {
-  background-color: #444; 
+  background-color: #939090; 
 }
 
 .dark-mode .navbar{
