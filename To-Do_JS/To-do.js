@@ -1,38 +1,64 @@
-// Theme 
-const themeToggle = document.getElementById ('theme-toggle');
+// Theme Toggle
+const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 
+// Function to set the theme
+function setTheme(isDark) {
+    if (isDark) {
+        document.body.classList.add('dark-mode');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    } else {
+        document.body.classList.remove('dark-mode');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    }
+}
+
+// Check localStorage for saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    setTheme(true);
+} else {
+    setTheme(false);
+}
+
+// Toggle theme on button click
 themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    setTheme(isDark);
 });
 
-// Selecting the input box and the task list elements from the HTML
+// Task Management Code (Original Code)
 let inputBox = document.querySelector('#task-input');
 let inputlist = document.querySelector('#list');
 
 // Enter keyboard key event listener
 inputBox.addEventListener("keydown", function (event) {
-    if(event.key === "Enter"){
+    if (event.key === "Enter") {
         addTask(inputBox.value);
         inputBox.value = "";
     }
 });
+
 // Add task button event listener
 document.getElementById('add-task-button').addEventListener('click', () => {
     const inputValue = inputBox.value.trim();
     if (inputValue) {
         addTask(inputValue);
         inputBox.value = "";
-    }else{
+    } else {
         alert("Write something");
     }
 });
+
 // Function to add new task to the list
-function addTask(taskText){
-    if(!taskText || taskText.trim() === ''){ 
+function addTask(taskText) {
+    if (!taskText || taskText.trim() === '') {
         alert("Write something"); // Show alert if the input is empty
     } else {
-        // Create a new list item 
+        // Create a new list item
         let li = document.createElement("li");
         li.innerHTML = taskText.trim();
 
@@ -71,7 +97,7 @@ function editTask(li) {
 }
 
 // Function that saves the current state of the task list to localStorage
-function saveData(){
+function saveData() {
     const tasks = [];
     inputlist.querySelectorAll('li').forEach(li => {
         tasks.push(li.firstChild.textContent);
@@ -80,7 +106,7 @@ function saveData(){
 }
 
 // Retrieves the saved data from localStorage and displays it in the task list
-function showTask(){
+function showTask() {
     const savedTasks = JSON.parse(localStorage.getItem("tasks"));
     if (savedTasks) {
         savedTasks.forEach(taskText => addTask(taskText));
@@ -90,8 +116,8 @@ function showTask(){
 // Load tasks from localStorage when the window loads
 window.onload = showTask;
 
-// Show the button when the user scrolls down 40px from the top of the document
-window.onscroll = function() {
+// Scroll-to-top button functionality
+window.onscroll = function () {
     const scrollBtn = document.getElementById('scrollBtn');
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
         scrollBtn.style.display = "block";
@@ -100,11 +126,10 @@ window.onscroll = function() {
     }
 };
 
-// Scroll to the top of the document when the button is clicked
-document.getElementById('scrollBtn').onclick = function() {
+document.getElementById('scrollBtn').onclick = function () {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 };
 
-// Add year in the footer (CopyRight Notice)
-document.getElementById('current-year').innerText = new Date().getFullYear();
+// Update copyright year
+document.getElementById('current-year').textContent = new Date().getFullYear();
